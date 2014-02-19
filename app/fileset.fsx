@@ -37,9 +37,12 @@ let fileset pattern_list cwd =
     // be safe, filter empty patterns
     let patterns = pattern_list |> List.filter (fun (p:String) -> not(String.IsNullOrEmpty(p)))
     // get include patterns
-    let includes = patterns |> List.filter (fun (p:String) -> p[0] != '!')
+    let includes = patterns |> List.filter (fun (p:String) -> p.[0] <> '!')
     // get exclude patterns
-    let excludes = patterns |> List.filter (fun (p) -> p[0] == '!') |> List.filter (fun (p) -> p.Substring(1))
+    let excludes =
+      patterns
+        |> List.filter (fun (p:String) -> p.[0] = '!')
+        |> List.map (fun (p) -> p.Substring(1))
     // get all files
     let all_files = globs includes cwd
     let excluded_files = globs excludes cwd
