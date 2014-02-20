@@ -5,12 +5,12 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>f836713b-d397-498f-b168-0feb6c020eaf</ProjectGuid>
+    <ProjectGuid>ee7c5f7c-14a2-4086-87a6-04b7aab3842f</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>app</RootNamespace>
-    <AssemblyName>app</AssemblyName>
+    <RootNamespace>demo</RootNamespace>
+    <AssemblyName>demo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <Name>app</Name>
+    <Name>demo</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Debug\app.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\demo.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Release\app.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\demo.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Program.fs" />
     <None Include="App.config" />
+    <None Include="build.fsx" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
