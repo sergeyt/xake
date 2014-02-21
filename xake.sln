@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "app", "app.fsproj", "{F836713B-D397-498F-B168-0FEB6C020EAF}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "app", "app\app.fsproj", "{F836713B-D397-498F-B168-0FEB6C020EAF}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "core", "..\core\core.fsproj", "{A2EACE28-BD18-429B-ADC5-C47FE13FB744}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "core", "core\core.fsproj", "{A2EACE28-BD18-429B-ADC5-C47FE13FB744}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "demo", "..\demo\demo.fsproj", "{EE7C5F7C-14A2-4086-87A6-04B7AAB3842F}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "demo", "demo\demo.fsproj", "{EE7C5F7C-14A2-4086-87A6-04B7AAB3842F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
