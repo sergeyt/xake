@@ -30,18 +30,20 @@ let globs patterns cwd =
     List.collect (fun x -> x), results
   }
 
+let private startsWith prefix (s:String) = s.StartsWith(prefix)
+
 // TODO make async
 // fileset - returns files matches to given patterns
 let fileset pattern_list cwd = 
   async {
     // be safe, filter empty patterns
-    let patterns = pattern_list |> List.filter (fun (p:String) -> not(String.IsNullOrEmpty(p)))
+    let patterns = pattern_list |> List.filter (String.IsNullOrEmpty >> not)
     // get include patterns
-    let includes = patterns |> List.filter (fun (p:String) -> p.[0] <> '!')
+    let includes = patterns |> List.filter (startsWith "!" >> not)
     // get exclude patterns
     let excludes =
       patterns
-        |> List.filter (fun (p:String) -> p.[0] = '!')
+        |> List.filter (startsWith "!")
         |> List.map (fun (p) -> p.Substring(1))
     // get all files
     let all_files = globs includes cwd
