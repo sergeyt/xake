@@ -1,5 +1,6 @@
 ﻿#r @"..\core\bin\Debug\xake.dll"
-open xake
+open xake.fileset
+open xake.csc
 
 // dir of demo project
 let dir = @"c:\pets\xake\demo"

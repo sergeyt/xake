@@ -1,4 +1,4 @@
-﻿module xake
+﻿module xake.fileset
 
 open System
 open System.Linq
