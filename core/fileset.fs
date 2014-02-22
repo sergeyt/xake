@@ -5,7 +5,7 @@ open System.Linq
 open System.IO
 
 let private identity x = x
-let (+/) path1 path2 = Path.Combine(path1, path2)
+let private (+/) path1 path2 = Path.Combine(path1, path2)
 
 // globbing matcher - finds all files in given directory matched to specified pattern
 let private glob (cwd:String) (pattern:String) = 
