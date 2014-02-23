@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="fileset.fs" />
     <Compile Include="csc.fs" />
+    <Compile Include="exec.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

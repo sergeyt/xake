@@ -4,8 +4,10 @@ open System;
 
 type Debug=Full|PdbOnly|Boolean
 
+// TODO consider to rename to CscOptions
 // c# module spec
 type CSharpModule = {
+  // TODO consider to remove
   mutable name: string;
   mutable out: string option;
   mutable deps: List<Async<string>>;
@@ -15,6 +17,7 @@ type CSharpModule = {
   mutable define: string option;
   mutable unsafe: bool option;
   mutable platform: string option;
+  // TODO consider to remove
   mutable target: string option;
   mutable nologo: bool option;
   mutable nostdlib: bool option;
